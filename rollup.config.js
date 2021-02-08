@@ -33,8 +33,13 @@ export default {
 			svelte({
 				preprocess: sveltePreprocess({
 					sourceMap: dev,
-					scss: {
-						includePaths: ['src'],
+					transformers: {
+						scss: {
+							includePaths: [
+								'node_modules',
+								'src'
+							]
+						}
 					},
 				}),
 				compilerOptions: {
@@ -90,8 +95,13 @@ export default {
 			svelte({
 				preprocess: sveltePreprocess({
 					sourceMap: dev,
-					scss: {
-						includePaths: ['src'],
+					transformers: {
+						scss: {
+							includePaths: [
+								'node_modules',
+								'src'
+							]
+						}
 					},
 				}),
 				compilerOptions: {

@@ -15,6 +15,10 @@
 	}
 </style>
 
+<svelte:head>
+  <style src="../scss/global.scss"></style>
+</svelte:head>
+
 <Nav {segment}/>
 
 <main>
