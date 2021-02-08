@@ -31,7 +31,12 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				preprocess: sveltePreprocess({ sourceMap: dev }),
+				preprocess: sveltePreprocess({
+					sourceMap: dev,
+					scss: {
+						includePaths: ['src'],
+					},
+				}),
 				compilerOptions: {
 					dev,
 					hydratable: true
@@ -83,7 +88,12 @@ export default {
 				'process.env.NODE_ENV': JSON.stringify(mode)
 			}),
 			svelte({
-				preprocess: sveltePreprocess({ sourceMap: dev }),
+				preprocess: sveltePreprocess({
+					sourceMap: dev,
+					scss: {
+						includePaths: ['src'],
+					},
+				}),
 				compilerOptions: {
 					dev,
 					generate: 'ssr',
