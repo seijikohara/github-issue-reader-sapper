@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: `https://api.github.com/repos/facebook/react`,
+  baseURL: `https://api.github.com/repos/sveltejs/sapper`,
 });
 api.interceptors.response.use(
   (response) => response,
